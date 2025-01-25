@@ -55,15 +55,35 @@ class LinkedList {
     newNode.next = this.list;
     this.list = newNode;
   }
+
+  size() {
+    let count = 0;
+    let tmpNode = this.list;
+
+    while (true) {
+      if (tmpNode.next === null && tmpNode.data) {
+        count++
+        break;
+      }
+
+      count++
+      tmpNode = tmpNode.next;
+      
+    }
+    return count;
+  }
 }
 
 const list = new LinkedList();
-list.prepend("value0");
-list.append("value1");
 list.append("value2");
 list.append("value3");
 list.append("value4");
-list.prepend("value-1");
+list.prepend("value1");
+list.prepend("value0");
+list.append("value5");
+list.append("value6");
+list.append("value7");
 
+console.log("size: " + list.size());
 console.log(list.list);
 console.log(list.list.next.next.next);
