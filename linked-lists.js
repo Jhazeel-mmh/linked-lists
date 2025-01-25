@@ -43,13 +43,27 @@ class LinkedList {
     node.data = value;
     this.list = node;
   }
+
+  prepend(value) {
+    const newNode = new Node();
+    newNode.data = value;
+
+    if (!this.list) {
+      this.list = newNode;
+      return;
+    }
+    newNode.next = this.list;
+    this.list = newNode;
+  }
 }
 
 const list = new LinkedList();
+list.prepend("value0");
 list.append("value1");
 list.append("value2");
 list.append("value3");
 list.append("value4");
+list.prepend("value-1");
 
 console.log(list.list);
 console.log(list.list.next.next.next);
