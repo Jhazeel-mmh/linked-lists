@@ -62,28 +62,31 @@ class LinkedList {
 
     while (true) {
       if (tmpNode.next === null && tmpNode.data) {
-        count++
+        count++;
         break;
       }
 
-      count++
+      count++;
       tmpNode = tmpNode.next;
-      
     }
     return count;
   }
+
+  head() {
+    return this.list;
+  }
+
+  tail() {
+    let tmpNode = this.list;
+
+    while (true) {
+      if (tmpNode.next === null) {
+        return tmpNode;
+      }
+
+      tmpNode = tmpNode.next;
+    }
+  }
 }
 
-const list = new LinkedList();
-list.append("value2");
-list.append("value3");
-list.append("value4");
-list.prepend("value1");
-list.prepend("value0");
-list.append("value5");
-list.append("value6");
-list.append("value7");
-
-console.log("size: " + list.size());
-console.log(list.list);
-console.log(list.list.next.next.next);
+export { LinkedList }
