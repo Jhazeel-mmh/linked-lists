@@ -144,6 +144,25 @@ class LinkedList {
       tmpNode = tmpNode.next;
     }
   }
+
+  toString() {
+    let tmpNode = this.list;
+    let str = "";
+
+    while (true) {
+      if (tmpNode.data) {
+        str += `( ${tmpNode.data} )`;
+      }
+
+      if (tmpNode.next === null) {
+        str += " -> null";
+        return str;
+      }
+
+      str += " -> ";
+      tmpNode = tmpNode.next;
+    }
+  }
 }
 
 export { LinkedList };

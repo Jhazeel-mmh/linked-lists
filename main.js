@@ -27,3 +27,4 @@ console.log("is there value6 in list: " + list.contains("value6"));
 console.log("is value6 match with index 5?, index: " + list.find("value6"));
 
 console.log("is value7 match with null, index: " + list.find("value7"));
+console.log(list.toString())
