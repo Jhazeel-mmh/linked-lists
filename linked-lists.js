@@ -100,6 +100,19 @@ class LinkedList {
     }
     return tmpNode;
   }
+
+  pop() {
+    let tmpNode = this.list;
+
+    while (true) {
+      if (tmpNode.next.next === null) {
+        tmpNode.next = null;
+        return;
+      }
+
+      tmpNode = tmpNode.next;
+    }
+  }
 }
 
 export { LinkedList };
