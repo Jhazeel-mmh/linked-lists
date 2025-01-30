@@ -30,4 +30,8 @@ console.log("is value7 match with null, index: " + list.find("value7"));
 
 // is 4.5 between 4 and 5?"
 list.insertAt("value4.5", 3);
+
+//this should be remove the value2
+list.removeAt(1);
+
 console.log(list.toString());

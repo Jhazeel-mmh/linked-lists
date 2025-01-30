@@ -172,6 +172,19 @@ class LinkedList {
     newNode.next = tmpPointer;
     node.next = newNode;
   }
+
+  removeAt(index) {
+    if (index === 0) {
+      let tmpPointer = this.head();
+      tmpPointer = tmpPointer.next;
+      this.list = tmpPointer;
+      return;
+    }
+
+    const node = this.at(index - 1);
+    let tmpPointer = node.next.next;
+    node.next = tmpPointer;
+  }
 }
 
 export { LinkedList };
