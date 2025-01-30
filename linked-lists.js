@@ -87,6 +87,19 @@ class LinkedList {
       tmpNode = tmpNode.next;
     }
   }
+
+  at(index) {
+    let tmpNode = this.list;
+
+    if (index === 0) {
+      return this.head();
+    }
+
+    for (let i = 0; i < index; i++) {
+      tmpNode = tmpNode.next;
+    }
+    return tmpNode;
+  }
 }
 
-export { LinkedList }
+export { LinkedList };
