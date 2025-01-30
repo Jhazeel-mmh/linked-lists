@@ -163,6 +163,15 @@ class LinkedList {
       tmpNode = tmpNode.next;
     }
   }
+
+  insertAt(value, index) {
+    const node = this.at(index);
+    let tmpPointer = node.next;
+    const newNode = new Node();
+    newNode.data = value;
+    newNode.next = tmpPointer;
+    node.next = newNode;
+  }
 }
 
 export { LinkedList };
