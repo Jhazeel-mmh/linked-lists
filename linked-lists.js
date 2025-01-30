@@ -113,6 +113,23 @@ class LinkedList {
       tmpNode = tmpNode.next;
     }
   }
+
+  contains(value) {
+    let tmpNode = this.list;
+
+    while (true) {
+      if (tmpNode.data == value) {
+        return true;
+      }
+
+      if (tmpNode.next === null) {
+        return false;
+      }
+
+      tmpNode = tmpNode.next;
+    }
+  }
+  
 }
 
 export { LinkedList };

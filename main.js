@@ -8,7 +8,7 @@ list.prepend("value1");
 list.append("value5");
 list.append("value6");
 list.append("value7");
-list.pop()
+list.pop();
 
 console.log("size: " + list.size());
 
@@ -21,3 +21,6 @@ console.log(list.list.next.next.next);
 console.log("index at 5" + JSON.stringify(list.at(5)));
 
 console.log("index at " + JSON.stringify(list.at(0)));
+
+console.log("is there value7 in list: " + list.contains("value7"));
+console.log("is there value6 in list: " + list.contains("value6"));
