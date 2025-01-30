@@ -129,7 +129,21 @@ class LinkedList {
       tmpNode = tmpNode.next;
     }
   }
-  
+
+  find(value) {
+    let tmpNode = this.list;
+    let indexOutput = 0;
+    while (true) {
+      if (tmpNode.data == value) {
+        return indexOutput;
+      }
+
+      if (tmpNode.next === null) return null;
+
+      indexOutput++;
+      tmpNode = tmpNode.next;
+    }
+  }
 }
 
 export { LinkedList };
